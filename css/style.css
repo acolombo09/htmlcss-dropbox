@@ -1,3 +1,40 @@
+:root{
+  --color-primary:
+  --color-primary-light:
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1rem;
+}
+
+section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border: 1px dashed red;
+}
+
+.container{
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px dashed black;
+}
+
+.container-large{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px dashed black;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -32,9 +69,8 @@ header nav .container{
   display: flex;
 }
 
-.container{
-  max-width: 980px;
-  margin: 0 auto;
+.bg-grey{
+  background-color: #d3d3d3;
 }
 
 .welcome-section {
@@ -118,6 +154,41 @@ header nav .container{
   text-align: right;
 }
 
+.col-blue{
+  width: 60%;
+  border: 1px dashed black;
+  min-height: 300px;
+  background-color: #128bff;
+}
+
+.col-pink{
+  width: 40%;
+  border: 1px dashed black;
+  min-height: 300px;
+  background-color: #ffc6c9;
+}
+
+.box-green{
+  border: 1px dashed black;
+  min-height: 500px;
+  background-color: #1b7a20;
+}
+
+.container-cards{
+  background-color: #aaa;
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card{
+  border-radius: 1rem;
+  border: 1px solid black;
+  padding: 2rem;
+  flex-basis: 33%;
+}
+
 .buttons{
   padding-top: 10px;
   text-align: center;
@@ -152,7 +223,7 @@ header nav .container{
   padding: .7rem 1rem;
 }
 
-.row, .row-reverse{
+.row{
   display: flex;
 }
 
