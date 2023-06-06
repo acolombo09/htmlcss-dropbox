@@ -1,6 +1,8 @@
+/* ------ General Rules ------
+------------------------------*/
 :root{
-  --color-primary:
-  --color-primary-light:
+  --color-primary: #0061ff;
+  --color-primary-light: #b4d0e7;
 }
 
 h1{
@@ -45,10 +47,12 @@ html, body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+header, main, footer{
+  border: 1px dashed rgb(64, 255, 47);
+}
+
 header{
   background-color: rgb(173, 216, 230);
-  padding-top: 1rem;
-  padding-bottom: 4px;
   width: 100%;
   min-height: 70px;
   background-color: #255ee9;
@@ -60,18 +64,69 @@ footer{
 }
 
 nav{
-  background-color: rgb(173, 216, 230);
+  background-color: white;
   width: 100%;
-  min-height: 70px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-header nav .container{
+header .container{
+  display: flex;
+}
+
+.row{
   display: flex;
 }
 
 .bg-grey{
   background-color: #d3d3d3;
 }
+
+/* ------ Nav ----------------------------
+------------------------------------------*/
+
+.nav-links, .nav-logo, .nav-login{
+  padding: .5rem;
+}
+
+.nav-logo img{
+  width: 100px;
+  height: fit-content;
+}
+
+.nav-logo{
+  min-width: 150px;
+}
+.nav-login{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links ul a{
+  display: inline-block;
+  padding: 0 1.1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+}
+
+/* ------ Hero Section/ Welcome Section------
+  ------------------------------------------*/
 
 .welcome-section {
   background-image: url("../img/jumbo.png");
@@ -98,61 +153,8 @@ header nav .container{
   min-height: 300px;
 }
 
-.container-nav{
-  max-width: 900px;
-  min-height: 70px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-links, .nav-logo, .nav-login{
-  padding: .5rem;
-}
-
-.nav-logo img{
-  width: 100px;
-  height: fit-content;
-}
-
-.nav-logo{
-  min-width: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.nav-login{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.nav-links{
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-links ul{
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-links ul a{
-  display: inline-block;
-  padding: 0 1.1rem;
-  text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
-}
-
-.nav-login{
-  text-align: right;
-}
+/* ------ Main Sections ------
+------------------------------*/
 
 .col-blue{
   width: 60%;
@@ -189,12 +191,14 @@ header nav .container{
   flex-basis: 33%;
 }
 
+/* ------ Buttons -----------
+------------------------------*/
+
 .buttons{
   padding-top: 10px;
   text-align: center;
 }
 
-/* Buttons */
 .btn{
   border-radius: 15px;
   border: none;
@@ -223,9 +227,8 @@ header nav .container{
   padding: .7rem 1rem;
 }
 
-.row{
-  display: flex;
-}
+/* ------ Footer ------
+-------------------------*/
 
 footer .col{
   flex-grow: 1;
