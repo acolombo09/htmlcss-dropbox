@@ -8,6 +8,15 @@ html, body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+header{
+  background-color: rgb(173, 216, 230);
+  padding-top: 1rem;
+  padding-bottom: 4px;
+  width: 100%;
+  min-height: 70px;
+  background-color: #255ee9;
+}
+
 footer{
   background-color: #23272b;
   padding-top: 2rem;
@@ -17,6 +26,40 @@ nav{
   background-color: rgb(173, 216, 230);
   width: 100%;
   min-height: 70px;
+}
+
+header nav .container{
+  display: flex;
+}
+
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.welcome-section {
+  background-image: url("../img/jumbo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container-welcome{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-section{
+  background-color: #00008b;
+  padding: 2rem 0;
+}
+
+.welcome-section .container{
+  max-width: 680px;
+  min-height: 300px;
 }
 
 .container-nav{
@@ -29,24 +72,55 @@ nav{
   align-items: center;
 }
 
-.nav-logo{
-  background-color: rgb(218, 165, 32);
-  flex-grow: 1;
-  border: 1px dashed black;
-  justify-content: flex-start;
+.nav-links, .nav-logo, .nav-login{
+  padding: .5rem;
 }
-.nav-links{
-  background-color: rgb(218, 165, 32);
-  flex-grow: 2;
-  border: 1px dashed black;
-  justify-content: center;
-  text-align: center;
+
+.nav-logo img{
+  width: 100px;
+  height: fit-content;
+}
+
+.nav-logo{
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .nav-login{
-  background-color: rgb(218, 165, 32);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-links{
   flex-grow: 1;
-  border: 1px dashed black;
-  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links ul a{
+  display: inline-block;
+  padding: 0 1.1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.nav-login{
+  text-align: right;
+}
+
+.buttons{
+  padding-top: 10px;
+  text-align: center;
 }
 
 /* Buttons */
