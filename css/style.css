@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+  background-color: #23272b;
+  padding-top: 2rem;
+}
+
+nav{
+  background-color: rgb(173, 216, 230);
+  width: 100%;
+  min-height: 70px;
+}
+
+.container-nav{
+  max-width: 900px;
+  min-height: 70px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo{
+  background-color: rgb(218, 165, 32);
+  flex-grow: 1;
+  border: 1px dashed black;
+  justify-content: flex-start;
+}
+.nav-links{
+  background-color: rgb(218, 165, 32);
+  flex-grow: 2;
+  border: 1px dashed black;
+  justify-content: center;
+  text-align: center;
+}
+.nav-login{
+  background-color: rgb(218, 165, 32);
+  flex-grow: 1;
+  border: 1px dashed black;
+  justify-content: flex-end;
+}
+
+/* Buttons */
+.btn{
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  padding: .7rem 1rem;
+}
+.btn-small{
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  padding: .4rem .7rem;
+  font-size: .8rem;
+}
+.btn-dark{
+  border-radius: 15px;
+  border: none;
+  background-color: #23272a;
+  color: white;
+  padding: .7rem 1rem;
+}
+.btn-violet{
+  border-radius: 15px;
+  border: none;
+  background-color: #7289da;
+  color: white;
+  padding: .7rem 1rem;
+}
+
+.row, .row-reverse{
+  display: flex;
+}
+
+footer .col{
+  flex-grow: 1;
+  background-color: #23272a;
+  min-height: 300px;
+}
+
+footer .col-large{
+  width: 15%;
+  background-color: #23272a;
+  border-color: white;
+}
+
+footer hr{
+  margin-top: 1.4rem;
+  margin-bottom: 1rem;
+  color: #7289da;
+}
+
+.lower-footer{
+  background-color: #23272a;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img{
+  width: 100px;
+  height: fit-content;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.ita{
+  width: 20px;
+}
+
+.col ul{
+  list-style: none;
+}
+
+.col ul a{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding-top: 10px;
+}
+
+.col h4{
+  color: rgb(114, 137, 218);
+}
+.col-large h3{
+  color: rgb(114, 137, 218);
+  padding-bottom: 12px;
+}
+.col-large span{
+  color: white;
+  font-size: 0.8rem;
+  padding-bottom: 12px;
+}
