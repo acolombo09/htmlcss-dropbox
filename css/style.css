@@ -2,7 +2,10 @@
 ------------------------------*/
 :root{
   --color-primary: #0061ff;
+  --color-primary-hover: #8bbbe2;
   --color-primary-light: #b4d0e7;
+  --color-dark: black;
+  --color-border: #d0d0d0;
 }
 
 h1{
@@ -26,15 +29,13 @@ section{
 .container{
   max-width: 920px;
   width: 100%;
-  margin: 0 auto;
+  min-height: 100px;
+  margin: auto;
   border: 1px dashed black;
 }
 
 .container-large{
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  border: 1px dashed black;
+  max-width: 1200px;
 }
 
 *{
@@ -55,7 +56,6 @@ header{
   background-color: rgb(173, 216, 230);
   width: 100%;
   min-height: 70px;
-  background-color: #255ee9;
 }
 
 footer{
@@ -72,12 +72,24 @@ nav{
   justify-content: space-between;
 }
 
-header .container{
+.row{
   display: flex;
 }
 
-.row{
-  display: flex;
+.row-gap-2{
+  gap: 2rem;
+}
+
+.col{
+  flex-grow: 1;
+  border: 1px solid green;
+  /* L'allargamento minimo sarà 0 */
+  flex-basis: 0;
+  position: relative;
+}
+
+.col-full-width{
+  flex-basis: 100%;
 }
 
 .bg-grey{
@@ -126,31 +138,37 @@ header .container{
 }
 
 /* ------ Hero Section/ Welcome Section------
-  ------------------------------------------*/
+------------------------------------------*/
 
-.welcome-section {
-  background-image: url("../img/jumbo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+#hero{
+  background-color: var(--color-primary-light);
+  padding-bottom: 0;
 }
 
-.container-welcome{
+#hero .col:nth-child(1){
+  flex-basis: 40%;
+  padding: 0rem 1rem 0;
+}
+
+#hero .col:nth-child(2){
+  flex-basis: 60%;
   display: flex;
-  flex-direction: column;
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
-.welcome-section{
-  background-color: #00008b;
-  padding: 2rem 0;
+#hero .jumbo-img{
+  width: 100%;
+  /* Aggiungo 40 px per tenere lo spazio 
+  minimo sopra come richiesto */
+  height: calc(100% + 40px);
+  max-height: 200px;
+  margin-bottom: -40px;
+  object-fit: contain;
+  object-position: bottom;
 }
 
-.welcome-section .container{
-  max-width: 680px;
-  min-height: 300px;
+.section-title{
+  margin-bottom: 2rem;
 }
 
 /* ------ Main Sections ------
@@ -185,10 +203,18 @@ header .container{
 }
 
 .card{
-  border-radius: 1rem;
-  border: 1px solid black;
-  padding: 2rem;
-  flex-basis: 33%;
+  border: 1px solid var(--color-border);
+  /* Anche min-height può andare bene */
+  height: 100%;
+}
+
+.card-header{
+  padding: .7rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.card-body{
+  padding: 1rem;
 }
 
 /* ------ Buttons -----------
@@ -203,8 +229,18 @@ header .container{
   border-radius: 15px;
   border: none;
   background-color: white;
-  padding: .7rem 1rem;
+  padding: 1rem;
 }
+
+.btn-primary{
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover{
+  background-color: var(--color-primary-hover);
+}
+
 .btn-small{
   border-radius: 15px;
   border: none;
