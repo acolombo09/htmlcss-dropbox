@@ -215,6 +215,25 @@ nav{
   gap: 1rem;
 }
 
+.squares-container{
+  display: flex;
+}
+
+/* Quadratini brands soluzione Florian ma con aspect ratio e wrap pensato da me */
+.box-container{
+  border: 1px solid red;
+  width: calc(100%/3);
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-container .box{
+  border: 1px solid blue;
+  width: 50%;
+  /* No height perchè il padre in flex ha align items stretch di default */
+}
+
 .card{
   border: 1px solid var(--color-border);
   /* Anche min-height può andare bene */
@@ -228,6 +247,75 @@ nav{
 
 .card-body{
   padding: 1rem;
+}
+
+.list-with-icons{
+  list-style: none;
+}
+
+.list-with-icons li{
+  padding: .8rem 0;
+  display: flex;
+  gap: .5rem;
+}
+
+
+.radio-container{
+  padding: 2rem 0;
+}
+
+/* Come modificare l'input radio, soluzione Florian */
+
+.radio-container [type="radio"]{
+  display: none;
+}
+
+.radio-container label{
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Creare un clone del radio per annullare il radio selezionato */
+.radio-container label .fake-radio{
+  content: "";
+  border: 1px solid gray;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  transition: border .3s linear;
+}
+
+/* Quando l'input è in checkradio, prendi l'elemento e coloralo diversamente */
+.radio-container label input:checked ~ .fake-radio{
+  color: var(--color-primary);
+  border-width: 5px;
+}
+
+.pre-footer .container:first-child{
+  justify-content: flex-start;
+}
+
+.pre-footer .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pre-footer hr{
+  font-size: 1.5px;
+  color: grey;
+}
+
+.arrow-down{
+  padding: 1rem .5rem;
+  font-size: .9rem;
+}
+
+.container .arrow-up{
+  padding: 1rem .5rem;
+  font-size: 1rem;
+  color: white;
 }
 
 /* ------ Buttons -----------
