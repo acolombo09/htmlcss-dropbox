@@ -48,7 +48,7 @@ html, body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-main, footer{
+main{
   border: 1px dashed rgb(64, 255, 47);
 }
 
@@ -57,8 +57,9 @@ header{
 }
 
 footer{
-  background-color: #23272b;
-  padding-top: 2rem;
+  background-color: var(--color-dark);
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 nav{
@@ -165,11 +166,12 @@ nav{
   width: 100%;
   /* Aggiungo 40 px per tenere lo spazio 
   minimo sopra come richiesto */
-  /* height: calc(100% + 40px); */
-  height: 100%;
+  height: calc(100% + 40px);
+  /* height: 100%; */
   max-height: 100%;
   object-fit: contain;
   transform: translateY(40px);
+  object-position: bottom;
 }
 
 .section-title{
@@ -269,33 +271,27 @@ nav{
 
 footer .col{
   flex-grow: 1;
-  background-color: #23272a;
   min-height: 300px;
 }
 
 footer .col-large{
   width: 15%;
-  background-color: #23272a;
   border-color: white;
 }
 
+footer .col-large span{
+  color: grey;
+}
+
+.arrow-up{
+  color: grey;
+}
+
 footer hr{
-  margin-top: 1.4rem;
+  width: 6rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
-  color: #7289da;
-}
-
-.lower-footer{
-  background-color: #23272a;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-logo img{
-  width: 100px;
-  height: fit-content;
+  color: grey;
 }
 
 .arrow {
@@ -310,7 +306,7 @@ footer hr{
   -webkit-transform: rotate(45deg);
 }
 
-.ita{
+.fa-earth-americas{
   width: 20px;
 }
 
@@ -321,19 +317,23 @@ footer hr{
 .col ul a{
   display: inline-block;
   text-decoration: none;
-  color: white;
+  color: lightgrey;
   padding-top: 10px;
+  font-size: 0.8rem;
 }
 
-.col h4{
-  color: rgb(114, 137, 218);
-}
-.col-large h3{
-  color: rgb(114, 137, 218);
-  padding-bottom: 12px;
-}
-.col-large span{
+footer h3{
   color: white;
+  padding-bottom: 1rem;
+}
+
+#language{
+  color: grey;
   font-size: 0.8rem;
   padding-bottom: 12px;
+}
+
+#hr-final{
+  width: 100%;
+  color: rgb(255, 255, 255);
 }
