@@ -20,6 +20,10 @@ h3{
   font-size: 1.5rem;
 }
 
+h4{
+  font-size: 1rem;
+}
+
 section{
   padding-top: 50px;
   padding-bottom: 50px;
@@ -92,6 +96,12 @@ nav{
 
 .col-full-width{
   flex-basis: 100%;
+  margin-top: 2rem;
+  border: 1px solid lightgrey;
+}
+
+.row-gap-2 col .card{
+  border: 1px solid lightgrey;
 }
 
 .bg-light{
@@ -236,15 +246,63 @@ nav{
   flex-wrap: wrap;
 }
 
+/* ATT.NE: SPRECO VOLONTARIO DI ID E RIGHE CSS - NON SO COME CAMBIARE LO SFONDO DEGLI SVG */
+#box1{
+  background-color: #a2d39b;
+}
+#box2{
+  background-color: #61082b;
+}
+#box3{
+  background-color: #0093ce;
+}
+#box4{
+  background-color: #ff1c1c;
+}
+#box5{
+  background-color: #f5f5f5;
+}
+#box6{
+  background-color: #d5001f;
+}
+#box7{
+  background-color: #b4d0e7;
+}
+#box8{
+  background-color: #0d2481;
+}
+#box9{
+  background-color: #ffd830;
+}
+
 .box-container .box{
   width: 50%;
   /* No height perchè il padre in flex ha align items stretch di default */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1b7a20;
   /* Soluzione Florian per non spostare gli spessori graficamente */
   border: 6px solid transparent;
+  aspect-ratio: 1/1;
+}
+
+.central-box{
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.central-box hr{
+  width: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: grey;
+}
+
+.central-box p{
+  font-size: .9rem;
+  margin-top: 1rem;
 }
 
 .box-container .box:hover{
@@ -266,10 +324,43 @@ nav{
 .card-header{
   padding: .7rem 1rem;
   border-bottom: 1px solid var(--color-border);
+  text-align: center;
 }
 
 .card-body{
   padding: 1rem;
+}
+
+.col-full-width .card-body{
+  display: flex;
+}
+
+.col-full-width .card-body .card-body-left{
+  min-height: 100px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.col-full-width .card-body .card-body-right{
+  min-height: 100px;
+  width: 30%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.col-full-width .card-body h3{
+  padding-bottom: 1rem;
+}
+
+.col-full-width .card-body h4{
+  padding-bottom: 1rem;
+}
+
+.col-full-width p{
+  padding-top: 2rem;
+  font-size: .9rem;
 }
 
 .list-with-icons{
@@ -282,8 +373,24 @@ nav{
   gap: .5rem;
 }
 
+.list-pricing{
+  list-style: none;
+}
+
+.list-pricing li{
+  padding: .2rem 0;
+  display: flex;
+  gap: .5rem;
+}
+
 .radio-container{
   padding: 2rem 0;
+}
+
+.radio-check{
+  padding-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 /* Come modificare l'input radio, soluzione Florian */
@@ -355,23 +462,24 @@ nav{
   color: #61082b;
 }
 
-.pre-footer .container:first-child{
+.pre-footer .sub-container:first-child{
   justify-content: flex-start;
+  border-bottom: 1px solid grey;
 }
 
-.pre-footer .container{
+.pre-footer .sub-container{
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: .6rem 0;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-}
-
-.pre-footer hr{
-  font-size: 1.5px;
-  color: grey;
+  align-items: center;
+  border-collapse: collapse;
 }
 
 .arrow-down{
   padding: 1rem .5rem;
+  margin-right: 1.5rem;
   font-size: .9rem;
 }
 
@@ -393,6 +501,7 @@ nav{
 .btn-primary{
   background-color: var(--color-primary);
   color: white;
+  padding: .5rem 2rem;
 }
 
 .btn-primary:hover{
