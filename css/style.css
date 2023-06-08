@@ -48,10 +48,6 @@ html, body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-main{
-  border: 1px dashed rgb(64, 255, 47);
-}
-
 header{
   width: 100%;
 }
@@ -91,8 +87,8 @@ nav{
   flex-basis: 100%;
 }
 
-.bg-grey{
-  background-color: #d3d3d3;
+.bg-light{
+  background-color: var(--color-primary-light);
 }
 
 /* ------ Nav ----------------------------
@@ -201,18 +197,9 @@ nav{
   background-color: #ffc6c9;
 }
 
-.box-green{
-  border: 1px dashed black;
-  min-height: 500px;
-  background-color: #1b7a20;
-}
-
-.container-cards{
-  background-color: #aaa;
-  margin: 1rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.brands-section{
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .squares-container{
@@ -229,9 +216,24 @@ nav{
 }
 
 .box-container .box{
-  border: 1px solid blue;
   width: 50%;
   /* No height perchè il padre in flex ha align items stretch di default */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b7a20;
+  /* Soluzione Florian per non spostare gli spessori graficamente */
+  border: 6px solid transparent;
+}
+
+.box-container .box:hover{
+  border-color: rgb(105, 218, 105);
+}
+
+.box-container .box svg{
+  width: 80%;
+  height: auto;
+  color: white;
 }
 
 .card{
@@ -292,6 +294,25 @@ nav{
   border-width: 5px;
 }
 
+.bg-white .container{
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.bg-light .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bg-light h2{
+  color: #61082b;
+}
+
 .pre-footer .container:first-child{
   justify-content: flex-start;
 }
@@ -341,17 +362,18 @@ nav{
   padding: .4rem .7rem;
   font-size: .8rem;
 }
-.btn-dark{
-  border: none;
-  background-color: #23272a;
-  color: white;
-  padding: .7rem 1rem;
-}
+
 .btn-violet{
   border: none;
   background-color: #7289da;
   color: white;
   padding: .7rem 1rem;
+}
+.btn-white{
+  border: none;
+  background-color: white;
+  color: black;
+  padding: .7rem 2rem;
 }
 
 /* ------ Footer ------
@@ -365,14 +387,6 @@ footer .col{
 footer .col-large{
   width: 15%;
   border-color: white;
-}
-
-footer .col-large span{
-  color: grey;
-}
-
-.arrow-up{
-  color: grey;
 }
 
 footer hr{
@@ -396,6 +410,15 @@ footer hr{
 
 .fa-earth-americas{
   width: 20px;
+}
+
+footer .col-large span{
+  color: grey;
+}
+
+.fa-caret-up{
+  color: grey;
+  vertical-align: middle;
 }
 
 .col ul{
