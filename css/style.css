@@ -114,16 +114,12 @@ nav{
   justify-content: space-between;
 }
 
-.nav-links, .nav-logo{
+.nav-links{
   padding: .5rem;
 }
 
 .nav-links img{
   width: 100px;
-}
-
-.nav-logo{
-  min-width: 150px;
 }
 
 .nav-links{
@@ -287,6 +283,7 @@ nav{
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
+  overflow: auto;
 }
 
 .central-box hr{
@@ -306,7 +303,7 @@ nav{
 }
 
 .box-container .box svg{
-  width: 80%;
+  width: 50%;
   height: auto;
   color: white;
 }
@@ -412,21 +409,11 @@ nav{
   gap: .25rem;
 }
 
-.radio-container{
-  padding: 2rem 0;
-}
-
-.radio-check{
-  padding-bottom: 2rem;
-  display: flex;
-  gap: 2rem;
-}
-
 /* Come modificare l'input radio, soluzione Florian 
   ATTENZIONE: NUOVO LAYOUT RADIO NON FUNZIONANTE*/
 
-.radio-container [type="radio"]{
-  display: none;
+.radio-container{
+  padding: 2rem 0;
 }
 
 .radio-container label{
@@ -434,12 +421,24 @@ nav{
   align-items: center;
 }
 
+.radio-container h2{
+  padding: 2rem 0;
+}
+
+.radio-container label:nth-child(3){
+  margin-left: 2rem;
+}
+
+.radio-container [type="radio"]{
+  display: none;
+}
+
 /* Creare un clone del radio per annullare il radio selezionato */
 .radio-container label .fake-radio{
   content: "";
-  border: 1px solid gray;
-  width: 25px;
-  height: 25px;
+  border: 1px solid var(--color-border);
+  width: 20px;
+  height: 20px;
   display: inline-block;
   border-radius: 50%;
   transition: border .3s linear;
@@ -447,7 +446,7 @@ nav{
 
 /* Quando l'input è in checkradio, prendi l'elemento e coloralo diversamente */
 .radio-container label input:checked ~ .fake-radio{
-  color: var(--color-primary);
+  border-color: var(--color-primary);
   border-width: 5px;
 }
 
@@ -552,6 +551,10 @@ nav{
   padding: .7rem 2rem;
 }
 
+.btn-white:hover{
+  background-color: var(--color-primary-hover);
+}
+
 .btn-noborder{
   border: none;
 }
@@ -573,18 +576,6 @@ footer hr{
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: grey;
-}
-
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
 }
 
 .fa-earth-americas{
